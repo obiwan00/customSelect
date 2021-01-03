@@ -10,6 +10,18 @@ parcel index.html
 ```
 
 ## Init Custom Select
+Wrap `select` with `.custom-select`
+```html
+<!-- html -->
+<div class="custom-select">
+    <select required name="hero">
+        <option value="">Select hero:</option>
+        <option value="riki">riki</option>
+        <option value="lina">lina</option>
+    </select>
+</div>
+```
+Init `Select` at JS
 ```javascript
 // js file
 import {Select} from './Select';
