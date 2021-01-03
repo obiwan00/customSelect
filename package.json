@@ -1,0 +1,9 @@
+{
+  "name": "select",
+  "version": "1.0.0",
+  "main": "js/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.32.0"
+  }
+}

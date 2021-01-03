@@ -1,0 +1,15 @@
+@import './select';
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+
+    .custom-select {
+        margin-bottom: 10px;
+    }
+}
+
+
+

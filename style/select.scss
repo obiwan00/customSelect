@@ -1,0 +1,85 @@
+.custom-select {
+    position: relative;
+    font-family: Arial;
+
+    select {
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+    }
+
+    // .custom-select--active
+
+    &--active {
+        .custom-select__head {
+            &:after {
+                transform: translateY(-50%) rotate(180deg);
+                transition: all 250ms ease-out;
+            }
+        }
+    }
+
+    // .custom-select__head
+
+    &__head {
+        background-color: DodgerBlue;
+
+        color: #ffffff;
+        padding: 8px 16px;
+        border: 1px solid;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7.5px 0 7.5px;
+            border-color: #fff transparent transparent transparent;
+            transform: translateY(-50%);
+            transition: all 250ms ease-out;
+        }
+    }
+
+    // .custom-select__body
+
+    &__body {
+        display: none;
+
+        position: absolute;
+        background-color: DodgerBlue;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    // .custom-select__item
+    &__item {
+        color: #ffffff;
+        padding: 8px 16px;
+        border: 1px solid;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        // .custom-select__item--current
+
+        &--current {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
